@@ -24,6 +24,10 @@
        justify-content: space-between;
        width: 100%;
        font-weight: bold;
+       &__username {
+         color: $mainWhiteColor;
+         font-size: 16px
+       }
        &__option {
          display: flex;
          &__newgroup, &__edit {
