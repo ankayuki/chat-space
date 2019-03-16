@@ -16,10 +16,10 @@
             %ul.side-header__box__option
               %li.side-header__box__option__newgroup
                 = link_to "/groups/new" do
-                  %i{class: "fa fa-edit"}
+                  = fa_icon "edit", class: "edit-icon"
               %li.side-header__box__option__edit
                 = link_to "/users/edit" do
-                  %i{class: "fa fa-cog"}
+                  = fa_icon "cog", class: "cog-icon"
         .side-main
           .group
             %p.group__name Sample-Group
@@ -44,6 +44,6 @@
             .input-box
               %input{class: "input-box__text", placeholder: "type a message"}
               %label{class: "input-box__image"}
-                %i{class: "fa fa-image"}
                 %input{class: "input-box__image__file", type: "file"}
             %input{class: "submit-button", value: "Send"}
+                = fa_icon "image", class: "new-message__input-box__image__image-icon"
