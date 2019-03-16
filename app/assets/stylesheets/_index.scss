@@ -96,3 +96,19 @@
     padding: 46px 40px;
     background-color: #fafafa;
     overflow: scroll;
+    .message{
+      padding-bottom: 40px;
+      &__detail{
+        display: flex;
+        margin-bottom: 10px;
+        &__whose-message{
+          color: $mainBlackColor;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        &__date{
+          color: $mainGrayColor;
+          font-size: 12px;
+          margin-left: 10px;
+        }
+      }
