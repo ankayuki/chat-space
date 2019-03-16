@@ -96,7 +96,7 @@
     padding: 46px 40px;
     background-color: $LightGrayColor;
     overflow: scroll;
-    .message{
+    &__message{
       padding-bottom: 40px;
       &__detail{
         display: flex;
