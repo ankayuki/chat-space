@@ -40,10 +40,10 @@
               %p.message__detail__date 2019/03/14(Thu) 14:40:10
             %p.message__text Hello!
         .form
-          %form.new-message
-            .new-message__input-box
-              %input{class: "new-message__input-box__text", placeholder: "type a message"}
-              %label{class: "new-message__input-box__image"}
-                = fa_icon "image", class: "new-message__input-box__image__image-icon"
-                %input{class: "new-message__input-box__image__file", type: "file"}
-            %input{class: "new-message__submit-button", value: "Send"}
+          %form.form__new-message
+            .form__new-message__input-box
+              %input{class: "form__new-message__input-box__text", placeholder: "type a message"}
+              %label{class: "form__new-message__input-box__image"}
+                = fa_icon "image", class: "form__new-message__input-box__image__image-icon"
+                %input{class: "form__new-message__input-box__image__file", type: "file"}
+            %input{class: "form__new-message__submit-button", value: "Send"}

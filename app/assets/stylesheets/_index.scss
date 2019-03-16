@@ -122,7 +122,7 @@
     height: 90px;
     padding: 20px 40px;
     background-color: #ddd;
-    .new-message{
+    &__new-message{
       display: flex;
       &__input-box{
         position: relative;
