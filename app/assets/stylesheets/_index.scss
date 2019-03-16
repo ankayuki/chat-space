@@ -60,3 +60,11 @@
 .chat-main{
   width: calc(100vw - 300px);
   float: left;
+  .main-header{
+    height: 100px;
+    padding: 0 40px;
+    justify-content: space-between;
+    display: flex;
+    border-bottom: solid 1px;
+    border-color: #eeeeee;
+    overflow: scroll;
