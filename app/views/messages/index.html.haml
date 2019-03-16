@@ -16,9 +16,11 @@
             %ul{class: "side-header__box__option"}
               %li{class: "side-header__box__option__newgroup"}
                 %a{href: "/groups/new"}
+                = link_to "/groups/new" do
                   %i{class: "fa fa-edit"}
               %li{class: "side-header__box__option__edit"}
                 %a{href: "/users/edit"}
+                = link_to "/users/edit" do
                   %i{class: "fa fa-cog"}
         %div{class: "side-main"}
           %div{class: "group"}
