@@ -1,0 +1,49 @@
+!!!
+%html
+  %head
+    %meta{charset: "utf-8"}
+    %title
+      ChatSpace
+    %link{rel: "stylesheet", href: "application.scss"}
+  %body
+    .blue-box
+      .notification グループを作成しました
+    .wrapper
+      .chat-side
+        .side-header
+          .side-header__box
+            %p.side-header__box__username Sample
+            %ul.side-header__box__option
+              %li.side-header__box__option__newgroup
+                = link_to "/groups/new" do
+                  = fa_icon "edit", class: "edit-icon"
+              %li.side-header__box__option__edit
+                = link_to "/users/edit" do
+                  = fa_icon "cog", class: "cog-icon"
+        .side-main
+          .group
+            %p.group__name Sample-Group
+            %p.group__last-message Sample-message
+      .chat-main
+        .main-header
+          .main-header__group-detail
+            %h2.main-header__group-detail__current-group Sample-Group
+            %ul.main-header__group-detail__member-list
+              %li.main-header__group-detail__member-list__heading
+              Member :
+              %li.main-header__group-detail__member-list__member Yuki
+          .main-header__edit-button Edit
+        .messages
+          .messages__message
+            .messages__message__detail
+              %p.messages__message__detail__whose-message Yuki
+              %p.messages__message__detail__date 2019/03/14(Thu) 14:40:10
+            %p.messages__message__text Hello!
+        .form
+          %form.form__new-message
+            .form__new-message__input-box
+              %input{class: "form__new-message__input-box__text", placeholder: "type a message"}
+              %label{class: "form__new-message__input-box__image"}
+                = fa_icon "image", class: "form__new-message__input-box__image__image-icon"
+                %input{class: "form__new-message__input-box__image__file", type: "file"}
+            %input{class: "form__new-message__submit-button", value: "Send"}
