@@ -5,3 +5,42 @@
     %title
       ChatSpace
     %link{rel: "stylesheet", href: "application.scss"}
+    %div{class: "wrapper"}
+      %div{class: "chat-side"}
+        %div{class: "side-header"}
+          %div{class: "side-header__box"}
+            %p{class: "side-header__box__username"}Sample
+            %ul{class: "side-header__box__option"}
+              %li{class: "side-header__box__option__newgroup"}
+                %a{href: "/groups/new"}
+                  %i{class: "fa fa-edit"}
+              %li{class: "side-header__box__option__edit"}
+                %a{href: "/users/edit"}
+                  %i{class: "fa fa-cog"}
+        %div{class: "side-main"}
+          %div{class: "group"}
+            %p{class: "group__name"}Sample-Group
+            %p{class: "group__last-message"}Sample-message
+      %div{class: "chat-main"}
+        %div{class: "main-header"}
+          %div{class: "main-header__group-detail"}
+            %h2{class: "main-header__group-detail__current-group"}Sample-Group
+            %ul{class: "main-header__group-detail__member-list"}
+              %li{class: "main-header__group-detail__member-list__heading"}
+              Member :
+              %li{class: "main-header__group-detail__member-list__member"}Yuki
+          %div{class: "main-header__edit-button"}Edit
+        %div{class: "messages"}
+          %div{class: "message"}
+            %div{class: "message__detail"}
+              %p{class: "message__detail__whose-message"}Yuki
+              %p{class: "message__detail__date"}2019/03/14(Thu) 14:40:10
+            %p{class: "message__text"}Hello!
+        %div{class: "form"}
+          %form{class: "new-message"}
+            %div{class: "input-box"}
+              %input{class: "input-box__text", placeholder: "type a message"}
+              %label{class: "input-box__image"}
+                %i{class: "fa fa-image"}
+                %input{class: "input-box__image__file", type: "file"}
+            %input{class: "submit-button", value: "Send"}
