@@ -18,7 +18,7 @@
                 = link_to "/groups/new" do
                   = fa_icon "edit", class: "edit-icon"
               %li.side-header__box__option__edit
-                = link_to "/users/edit" do
+                = link_to edit_user_path(current_user) do
                   = fa_icon "cog", class: "cog-icon"
         .side-main
           .group
