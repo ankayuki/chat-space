@@ -12,18 +12,23 @@
       .chat-side
         .side-header
           .side-header__box
-            %p.side-header__box__username Sample
+            %p.side-header__box__username
+              = current_user.name
             %ul.side-header__box__option
               %li.side-header__box__option__newgroup
-                = link_to "/groups/new" do
+                = link_to new_group_path do
                   = fa_icon "edit", class: "edit-icon"
               %li.side-header__box__option__edit
                 = link_to edit_user_path(current_user) do
                   = fa_icon "cog", class: "cog-icon"
         .side-main
-          .group
-            %p.group__name Sample-Group
-            %p.group__last-message Sample-message
+          - current_user.groups.each do |group|
+            .group
+              = link_to group_messages_path(group) do
+                .group__name
+                  = group.name
+                .group__last-message
+                  メッセージはまだありません。
       .chat-main
         .main-header
           .main-header__group-detail
@@ -32,7 +37,9 @@
               %li.main-header__group-detail__member-list__heading
               Member :
               %li.main-header__group-detail__member-list__member Yuki
-          .main-header__edit-button Edit
+          .main-header__edit-button
+            = link_to edit_group_path(:id) do
+              Edit
         .messages
           .messages__message
             .messages__message__detail
