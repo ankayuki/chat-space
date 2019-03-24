@@ -96,7 +96,7 @@
     padding: 46px 40px;
     background-color: $LightGrayColor;
     overflow: scroll;
-    &__message{
+    .message{
       padding-bottom: 40px;
       &__detail{
         display: flex;
@@ -112,7 +112,7 @@
           margin-left: 10px;
         }
       }
-      &__text{
+      &__content{
         font-size: 14px;
         color: $mainBlackColor;
       }

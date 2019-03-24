@@ -28,29 +28,29 @@
                 .group__name
                   = group.name
                 .group__last-message
-                  メッセージはまだありません。
+                  = group.show_last_message
       .chat-main
         .main-header
           .main-header__group-detail
-            %h2.main-header__group-detail__current-group Sample-Group
+            %h2.main-header__group-detail__current-group
+              = @group.name
             %ul.main-header__group-detail__member-list
               %li.main-header__group-detail__member-list__heading
               Member :
-              %li.main-header__group-detail__member-list__member Yuki
+              %li.main-header__group-detail__member-list__member
+              - @group.group_users.each do |group_user|
+                = group_user.user.name
           .main-header__edit-button
             = link_to edit_group_path(:id) do
               Edit
         .messages
-          .messages__message
-            .messages__message__detail
-              %p.messages__message__detail__whose-message Yuki
-              %p.messages__message__detail__date 2019/03/14(Thu) 14:40:10
-            %p.messages__message__text Hello!
+          = render partial: 'message', collection: @messages
         .form
-          %form.form__new-message
+          = form_for [@group, @message], html: { class: "form__new-message"} do |f|
             .form__new-message__input-box
-              %input{class: "form__new-message__input-box__text", placeholder: "type a message"}
-              %label{class: "form__new-message__input-box__image"}
-                = fa_icon "image", class: "form__new-message__input-box__image__image-icon"
-                %input{class: "form__new-message__input-box__image__file", type: "file"}
-            %input{class: "form__new-message__submit-button", value: "Send"}
+              = f.text_field :content, class: 'form__new-message__input-box__text', placeholder: 'type a message'
+              = f.label :image, class: 'form__new-message__input-box__image' do
+                = fa_icon 'picture-o', class: 'form__new-message__input-box__image__image-icon'
+                = f.file_field :image, class: 'form__new-message__input-box__image__file'
+            = f.submit 'Send', class: 'form__new-message__submit-button'
+
