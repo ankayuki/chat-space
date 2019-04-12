@@ -1,3 +1,4 @@
+$(function(){
   function buildHTML(message){
     var insertImage = ' ';
     if (message.image) {
@@ -23,3 +24,4 @@
                 </div>`;
     return html;
   }
+})
