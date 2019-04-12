@@ -39,4 +39,7 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html);
+      $('.form__new-message__input-box__text').val('');
+      $('.form__new-message__input-box__image__file').val('');
+      $('.form__new-message__submit-button').prop('disabled', false);
 })
