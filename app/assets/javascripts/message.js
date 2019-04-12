@@ -47,4 +47,9 @@ $(function(){
         scrollTop: $messages[0].scrollHeight
       }, 1500);
     })
+    .fail(function(){
+        alert('error')
+        $('.form__new-message__submit-button').prop('disabled', false);
+    })
+  })
 })
