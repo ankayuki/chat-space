@@ -54,6 +54,12 @@ $(function(){
   var reloadMessages = function() {
     var last_message_id = $('.message:last').data('message-id')
     var group_id = $('.message').data('group-id')
+    $.ajax({
+      url: "/groups/"+group_id+"/api/messages",
+      type: "GET",
+      dataType: 'json',
+      data: {id: last_message_id},
+    })
   setInterval(reloadMessages, 5000);
 });
 
