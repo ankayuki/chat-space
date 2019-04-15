@@ -51,4 +51,7 @@ $(function(){
         $('.form__new-message__submit-button').prop('disabled', false);
     })
   })
-})
+  var reloadMessages = function() {
+  setInterval(reloadMessages, 5000);
+});
+
