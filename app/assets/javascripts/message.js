@@ -60,6 +60,10 @@ $(function(){
       dataType: 'json',
       data: {id: last_message_id},
     })
+    .fail(function() {
+      alert('error');
+    });
+  };
   setInterval(reloadMessages, 5000);
 });
 
