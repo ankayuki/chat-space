@@ -4,7 +4,7 @@ $(function(){
     if (message.image) {
       insertImage = `<img src="${message.image}">`;
     };
-    var html = `<div class="message">
+    var html = `<div class="message" data-id='messsage.id'>
                   <div class="upper-message">
                     <div class="upper-message__user-name">
                       ${message.user_name}
